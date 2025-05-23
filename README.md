@@ -1,4 +1,4 @@
 ## Zerane C.
 
--[GitHub Repository](
+-[GitHub Repository](https://github.com/zeranecatamco/Final-Project)
 -[Live Website](
