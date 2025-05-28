@@ -2,87 +2,170 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Zerane Catamco | Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header -->
   <header>
     <h1>Zerane Catamco</h1>
-    <p>Web Developer • UI/UX Enthusiast • Creative Coder</p>
+    <p>Student | Programmer | Dreamer</p>
   </header>
 
-  <!-- Navigation -->
   <nav>
-    <a href="#projects">Projects</a>
     <a href="#about">About</a>
+    <a href="#portfolio">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
+  <section id="about" class="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>
+      Hello! My name is Zerane. I'm a senior high school student from Mt. Eden and this year I decided to explore the world of programming by taking Computer Science Principle class. And in this class I learned how to use different dtata types, conditional statements, comparison and arithmetic operators, loops, functions, and arrays in C++ compiler and JavaScript.
+    </p>
+  </section>
+
+  <section id="portfolio">
+    <h2 data-aos="fade-up">Projects</h2>
     <div class="portfolio-grid">
-
-      <!-- Project 1 -->
-      <a href="https://zeranecatamco.github.io/Final-Project/" target="_blank" class="project">
-        <img src="images/project1.png" alt="Final Project" />
+      <div class="project" data-aos="fade-up">
+        <img src="images/hash-function.png" alt="Hash Function" />
         <div class="project-info">
-          <h3>Final Project</h3>
-          <p>Interactive game or app—click to play with it live!</p>
-        </div>
-      </a>
+          <h3>Hash Function</h3>
+          <p>The purpose of this hash functions project is to explore how hash functions work and why they are important. A hash function takes some input, like a word, and turns it into a short string of numbers and letters.
+      </div>
 
-      <!-- Project 2 -->
-      <a href="https://your-other-project-link.com" target="_blank" class="project">
-        <img src="images/project2.png" alt="Another Project" />
+      <div class="project" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/matching-card.png" alt="Matching Card" />
         <div class="project-info">
-          <h3>Second Project</h3>
-          <p>A fun experiment with JavaScript and design!</p>
+          <h3>Matching Card</h3>
+          <p>This porject was made to create a fun and simple games where players flip over cards to find matching pairs. This project helps us learn how to use logic, memory, and design in a game. By building this project, we get better at programming and understand how to create interactive applications.</p>
         </div>
-      </a>
+      </div>
 
-      <!-- Add more projects below using the same format -->
-
+      <div class="project" data-aos="fade-up" data-aos-delay="200">
+        <img src="images/password-generator.png" alt="Password Generator" />
+        <div class="project-info">
+          <h3>Password Generator</h3>
+          <p>This password generator was the first project for us as an introduction on how to program in JavaScript. This project is important for making strong, random passwords to help keep accounts safe. This project helped us learn about random number generation, user input, and basic security.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>
-      Hi! I'm Zerane, a passionate developer who loves building interactive web experiences.
-      I enjoy blending code and creativity, and I'm always learning new things.
-    </p>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
+  <section id="contact" class="contact" data-aos="fade-up">
     <h2>Contact</h2>
     <p>
-      Feel free to reach out to me at
-      <a href="mailto:youremail@example.com">youremail@example.com</a>
-      or connect on
-      <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>.
+      Email me at <strong>zerane.enriquez13@gmail.com</strong> or connect via GitHub.
     </p>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Zerane Catamco. All rights reserved.</p>
+    &copy; 2025 Zerane Catamco. All rights reserved.
   </footer>
 
-  <!-- Scroll to Top Button -->
-  <button id="scrollToTop" title="Back to Top">↑</button>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    const scrollBtn = document.getElementById("scrollToTop");
-    window.onscroll = () => {
-      scrollBtn.style.display = window.scrollY > 400 ? "block" : "none";
-    };
-    scrollBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
   </script>
+</body>
+</html>
 
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zerane Catamco | Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Zerane Catamco</h1>
+    <p>Student | Programmer | Dreamer</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#portfolio">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about" class="about" data-aos="fade-up">
+    <h2>About Me</h2>
+    <p>
+      Hello! My name is Zerane. I'm a senior high school student from Mt. Eden and this year I decided to explore the world of programming by taking Computer Science Principle class. And in this class I learned how to use different dtata types, conditional statements, comparison and arithmetic operators, loops, functions, and arrays in C++ compiler and JavaScript.
+    </p>
+  </section>
+
+  <section id="portfolio">
+    <h2 data-aos="fade-up">Projects</h2>
+    <div class="portfolio-grid">
+      <div class="project" data-aos="fade-up">
+        <img src="images/hash-function.png" alt="Hash Function" />
+        <div class="project-info">
+          <h3>Hash Function</h3>
+          <p>The purpose of this hash functions project is to explore how hash functions work and why they are important. A hash function takes some input, like a word, and turns it into a short string of numbers and letters.
+      </div>
+
+      <div class="project" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/matching-card.png" alt="Matching Card" />
+        <div class="project-info">
+          <h3>Matching Card</h3>
+          <p>This porject was made to create a fun and simple games where players flip over cards to find matching pairs. This project helps us learn how to use logic, memory, and design in a game. By building this project, we get better at programming and understand how to create interactive applications.</p>
+        </div>
+      </div>
+
+      <div class="project" data-aos="fade-up" data-aos-delay="200">
+        <img src="images/password-generator.png" alt="Password Generator" />
+        <div class="project-info">
+          <h3>Password Generator</h3>
+          <p>This password generator was the first project for us as an introduction on how to program in JavaScript. This project is important for making strong, random passwords to help keep accounts safe. This project helped us learn about random number generation, user input, and basic security.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>
+      Email me at <strong>zerane.enriquez13@gmail.com</strong> or connect via GitHub.
+    </p>
+  </section>
+
+  <footer>
+    &copy; 2025 Zerane Catamco. All rights reserved.
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
 </body>
 </html>
