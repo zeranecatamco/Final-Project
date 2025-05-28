@@ -1,3 +1,4 @@
+/* Reset and base */
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -6,23 +7,28 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: #fff;
+  background: #e6f3fa; /* soft baby blue background */
   color: #111;
 }
 
+/* Baby blue color palette */
 :root {
   --baby-blue: #a3cef1;
   --baby-blue-dark: #5290e9;
   --baby-blue-light: #d4e8fc;
   --text-gray: #444;
   --text-light-gray: #666;
-  --border-gray: #ddd;
-  --background-light: #f8faff;
+  --border-gray: #ccc;
+  --background-white: #ffffff;
+  --background-card: #f3faff;
 }
 
+/* Header */
 header {
   padding: 40px 20px;
   text-align: center;
+  background: var(--background-white);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 header h1 {
@@ -36,9 +42,15 @@ header p {
   color: var(--text-light-gray);
 }
 
+/* Navigation */
 nav {
   text-align: center;
   padding: 20px 0;
+  background: var(--background-white);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--border-gray);
 }
 
 nav a {
@@ -54,10 +66,15 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Sections */
 section {
   max-width: 1000px;
   margin: auto;
   padding: 60px 20px;
+  background: var(--background-white);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+  margin-bottom: 40px;
 }
 
 section h2 {
@@ -67,6 +84,7 @@ section h2 {
   color: var(--baby-blue-dark);
 }
 
+/* Portfolio Grid */
 .portfolio-grid {
   display: grid;
   gap: 30px;
@@ -78,7 +96,7 @@ section h2 {
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease, border-color 0.3s ease;
-  background: var(--background-light);
+  background: var(--background-card);
 }
 
 .project:hover {
@@ -101,6 +119,7 @@ section h2 {
   color: var(--baby-blue-dark);
 }
 
+/* About and Contact */
 .contact p,
 .about p {
   max-width: 600px;
@@ -110,15 +129,17 @@ section h2 {
   color: var(--text-gray);
 }
 
+/* Footer */
 footer {
   text-align: center;
   padding: 30px;
   font-size: 0.9rem;
   color: var(--text-light-gray);
+  background: var(--background-white);
   border-top: 1px solid var(--border-gray);
-  background: var(--background-light);
 }
 
+/* Responsive */
 @media (max-width: 600px) {
   header h1 {
     font-size: 2rem;
