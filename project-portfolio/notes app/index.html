@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width-device-width, initial-scale=1.0">
+  <title>Notes App - Easy Tutorials</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <p>Zerane and Rosalind</p>
+  <div class="container">
+    <h1><img src="https://cdn-icons-png.freepik.com/512/7235/7235476.png">Notes</h1>
+    <button class="btn"><img src="https://cdn-icons-png.flaticon.com/512/2344/2344200.png">Create Notes</button>
+    <div class="notes-container">
+      <!-- <p contenteditable="true" class="input-box">
+        <img src="https://cdn-icons-png.freepik.com/512/6564/6564678.png">
+      </p> -->
+    </div>
+  </div>
+  <script>
+    const notesContainer = document.querySelector(".notes-container");
+    const createBtn = document.querySelector(".btn");
+
+    function showNotes() { //display notes saved in local storage
+      const savedNotes = localStorage.getItem("notes");
+      if (savedNotes) {
+        notesContainer.innerHTML = savedNotes;
+      }
+    }
+    showNotes(); //calling the function to show notes
+    function updateStorage() { //update the local storage with the current notes
+      localStorage.setItem("notes", notesContainer.innerHTML);
+    }
+    createBtn.addEventListener("click", () => { //event listener for the 'Create Notes' button
+      let inputBox = document.createElement("p"); //create a new note input box and 'delete' icon
+      let img = document.createElement("img");
+      inputBox.className = "input-box"; //applying the input box class
+      inputBox.setAttribute("contenteditable", "true"); //allow content to be edited
+      img.src = "https://cdn-icons-png.freepik.com/512/6564/6564678.png"; //image/source for the 'delete' icon
+      inputBox.appendChild(img);
+      notesContainer.appendChild(inputBox);
+      updateStorage();
+    });
+    notesContainer.addEventListener("click", function(e) { //if you clicked on the 'delete' icon (img), the notes container will be removed
+      if (e.target.tagName === "IMG") {
+        const confirmDelete = window.confirm("Are you sure you want to delete this note?"); //ask you to confirm that you want to delete the note when clicking the trash icon
+        if (confirmDelete) {
+          e.target.parentElement.remove(); //remove the note
+          updateStorage(); //update the local storage
+        }
+      } else if (e.target.tagName === "P") { //if clicked on the note itself save changes
+        let notes = document.querySelectorAll(".input-box");
+        notes.forEach(nt => {
+          nt.onkeyup = function() { //update storage on each keystroke
+            updateStorage();
+          }
+        });
+      }
+    });
+    document.addEventListener("keydown", event => { //event listener for preventing line breaks when pressing "Enter"
+      if (event.key === "Enter") {
+        document.execCommand("insertLineBreak"); //Prevents default behavior
+        event.preventDefault(); //prevents new line on enter
+      }
+    });
+  </script>
+</body>
+
+</html>
