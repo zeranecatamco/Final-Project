@@ -2,22 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css">
-  <title>Welcome to My Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zerane Catamco | Portfolio</title>
+
+  <!-- Fonts & AOS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <h1>Zerane’s Projects Portfolio</h1>
+    <h1>Zerane Catamco</h1>
+    <p>Frontend Developer | Designer | Dreamer</p>
   </header>
 
-  <section class="about-me">
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#portfolio">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="about" data-aos="fade-up">
     <h2>About Me</h2>
-    <p>Hellooo! I'm Zerane, a student programmer from Mt. Eden High School. This year I decided to explore, hoping to gain new skill in programming. In my Computer Science class, I learned how to  use different data types, functions, arrays, </p>
+    <p>
+      I’m a web developer passionate about creating clean, creative, and user-focused designs. Whether it's a portfolio, business page, or interactive UI, I bring ideas to life on the web.
+    </p>
   </section>
 
-  <section>
-    <a href="projects.html"> View My Projects</a>
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2 data-aos="fade-up">Selected Projects</h2>
+    <div class="portfolio-grid">
+      <div class="project" data-aos="fade-up">
+        <img src="images/project1.jpg" alt="Project 1" />
+        <div class="project-info">
+          <h3>Project One</h3>
+          <p>Short description about this project.</p>
+        </div>
+      </div>
+
+      <div class="project" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/project2.jpg" alt="Project 2" />
+        <div class="project-info">
+          <h3>Project Two</h3>
+          <p>Another creative build.</p>
+        </div>
+      </div>
+
+      <div class="project" data-aos="fade-up" data-aos-delay="200">
+        <img src="images/project3.jpg" alt="Project 3" />
+        <div class="project-info">
+          <h3>Project Three</h3>
+          <p>A sample project with purpose and detail.</p>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact" data-aos="fade-up">
+    <h2>Contact</h2>
+    <p>
+      Email me at <strong>zeranecatamco@example.com</strong> or connect via GitHub, LinkedIn, or other socials.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Zerane Catamco. All rights reserved.
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  </script>
 </body>
 </html>
